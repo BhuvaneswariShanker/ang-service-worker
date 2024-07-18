@@ -324,13 +324,20 @@
   </div>
 </main>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+@if(isNewAppVersionAvailable){
+  <div severity="info" styleClass="message-container">
+
+    <!-- <p>
+      Making an update to app contents
+    </p> -->
+    <button (click)="refreshApp()" [style]="{ height: '25px' }" >
+      <span class="text-nowrap">Refresh</span>
+    </button>
+ 
+  </div>
+}
+
 
 
 <router-outlet />
